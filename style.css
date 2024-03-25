@@ -61,7 +61,7 @@ time, mark, audio, video {
     font-size: clamp(20px, 1.9vw, 40px);
 }
 
-h4 {
+.sidegripwrapper > h4 {
     justify-self: start;
     user-select: none;
 }
@@ -178,7 +178,7 @@ img {
     background-color: rgb(153, 153, 153, 0.3);
     display: flex;
     box-sizing: content-box;
-    gap: 10px;
+    
     padding: 30px 20px 20px 30px;
 }
 
@@ -206,6 +206,37 @@ img {
     border-left-width: 5px;
     border-style: solid;
     box-shadow: var(--shadows);
+    padding: 1vmax;
+    min-height: 160px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: clamp(11px, 0.8vmax, 1.5vmax);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.card h4 {
+    padding-bottom: 0.5vmax;
+}
+
+.headerandtext {
+    flex: 6;
+}
+
+.icons {
+    flex: 1;
+    display: flex;
+    
+    justify-content: flex-end;
+    gap: 0.8vmax;
+}
+
+.icons img {
+    max-height: 20px;
 }
 
 .sidecardswrapper {
@@ -214,14 +245,50 @@ img {
     grid-template-rows: 5% 45% 5% 45%;
 }
 
-.sidecardswrapper > .rightcard {
+.rightcard {
     background-color: white;
     margin: 3%;
+    padding: 0.8vmax;
     box-shadow: var(--shadows);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.subpart {
+    flex: 1;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.subpart > h4 {
+    font-size: 80%;
+    font-weight: 600;
+    padding-bottom: 0.5vmax;
+}
+
+.subpart > p {
+    font-size: clamp(10px, 0.5vmax, 1.1vmax);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.rightcard div:last-of-type {
+    border: none;
+}
+
+.rightcard > div:last-of-type {
+    border: none;
+}
+
+.rightcard > div:nth-child(2),
+.rightcard > div:last-of-type {
+    padding-top: 2%;
 }
 
 .sectionheaderright {
     padding: 2.5% 3% 0 3%;
-    
 }
