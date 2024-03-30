@@ -23,11 +23,17 @@ time, mark, audio, video {
     --shadows: 6px 6px 9px -8px black;
 }
 
+@font-face {
+    font-family: PTSans;
+    src: url(./PTSans-Regular.ttf);
+}
+
 #allcontainer {
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(180px, 1fr) 5fr;
     grid-template-rows: minmax(125px, 1fr) 5fr;
+    font-family: PTSans;
 }
 
 .sidebar {
@@ -85,14 +91,6 @@ time, mark, audio, video {
     justify-self: start;
     user-select: none;
 }
-
-
-/* li {
-    list-style-type: none;
-    display: flex;
-    height: 1rem; 
-    font-size: clamp(15px, 1.2vw, 30px);
-} */
 
 .header {
     grid-column: 2 / span 1;
@@ -223,7 +221,7 @@ time, mark, audio, video {
 }
 
 .card p {
-    font-size: clamp(11px, 0.8vmax, 1.5vmax);
+    font-size: clamp(12px, 0.7vmax, 1.5vmax);
     color: rgba(0, 0, 0, 0.5);
 }
 
